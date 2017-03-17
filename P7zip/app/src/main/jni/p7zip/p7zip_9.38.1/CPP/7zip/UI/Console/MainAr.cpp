@@ -108,8 +108,14 @@ int MY_CDECL main
   }
   catch(const char *s)
   {
-    (*g_StdStream) << kExceptionErrorMessage << s << endl;
-    return (NExitCode::kFatalError);
+    if (strcmp(s, "Enter password:") == 0) {
+      return (NExitCode::kGetPassword);
+    } else if (strcmp(s, "Wrong password?") == 0) {
+      return (NExitCode::kWrongPassword);
+    } else {
+      (*g_StdStream) << kExceptionErrorMessage << s << endl;
+      return (NExitCode::kFatalError);
+    }
   }
   catch(int t)
   {

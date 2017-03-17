@@ -147,9 +147,11 @@ STDMETHODIMP CExtractCallbackConsole::SetOperationResult(Int32 operationResult, 
           break;
         case NArchive::NExtract::NOperationResult::kCRCError:
           s = (encrypted ? kCrcFailedEncrypted : kCrcFailed);
+          throw "Wrong password?";
           break;
         case NArchive::NExtract::NOperationResult::kDataError:
           s = (encrypted ? kDataErrorEncrypted : kDataError);
+          throw "Wrong password?";
           break;
         case NArchive::NExtract::NOperationResult::kUnavailable:
           s = kUnavailableData;

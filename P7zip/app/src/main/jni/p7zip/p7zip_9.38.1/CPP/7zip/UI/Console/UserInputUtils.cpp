@@ -84,7 +84,13 @@ UString GetPassword(CStdOutStream *outStream,bool verify)
 #else
   (*outStream) << "\nEnter password:";
   outStream->Flush();
+#ifdef ANDROID_NDK
+  // (wbs) throw exception
+  AString oemPassword = "Enter password:";
+  throw "Enter password:";
+#else
   AString oemPassword = g_StdIn.ScanStringUntilNewLine();
+#endif
 #endif
 #endif /* USE_FLTK */
   return MultiByteToUnicodeString(oemPassword, CP_OEMCP);

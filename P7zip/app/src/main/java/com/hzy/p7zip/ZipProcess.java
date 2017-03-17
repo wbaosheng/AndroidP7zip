@@ -24,6 +24,8 @@ public class ZipProcess {
 	private static final int RET_FAULT = 2;
 	private static final int RET_COMMAND = 7;
 	private static final int RET_MEMORY = 8;
+	private static final int RET_GET_PASSWORD = 10;
+	private static final int RET_WRONG_PASSWORD = 11;
 	private static final int RET_USER_STOP = 255;
 	
 	Context context = null;
@@ -64,6 +66,12 @@ public class ZipProcess {
 					break;
 				case RET_MEMORY:
 					retMsgId = R.string.msg_ret_memmory;
+					break;
+				case RET_GET_PASSWORD:
+					retMsgId = R.string.msg_ret_get_password;
+					break;
+				case RET_WRONG_PASSWORD:
+					retMsgId = R.string.msg_ret_wrong_password;
 					break;
 				case RET_USER_STOP:
 					retMsgId = R.string.msg_ret_user_stop;
