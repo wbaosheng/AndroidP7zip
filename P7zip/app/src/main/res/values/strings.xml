@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AndroidP7zip</string>
+    <string name="action_settings">Settings</string>
+    <string name="progress_title">Message</string>
+    <string name="progress_message">Please wait...</string>
+    <string name="msg_ret_success">Success</string>
+    <string name="msg_ret_warning">Warning (Non fatal error(s))</string>
+    <string name="msg_ret_fault">Fatal error </string>
+    <string name="msg_ret_command">Command line error</string>
+    <string name="msg_ret_memmory">Not enough memory for operation</string>
+    <string name="msg_ret_user_stop">User stopped the process</string>
+    <string-array name="array_overwrite_mode">
+        <item >Overwrite existing file</item>
+        <item >Skip existing file</item>
+        <item >Rename extracting file</item>
+        <item >Rename existing file</item>
+    </string-array>
+        <string-array name="array_compress_type">
+        <item >zip</item>
+        <item >7z</item>
+        <item >iso</item>
+        <item >tar</item>
+    </string-array>
+
+</resources>

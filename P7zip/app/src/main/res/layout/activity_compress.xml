@@ -1,0 +1,123 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
+
+        <EditText
+            android:id="@+id/editTextCoSrc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/buttonCoSrc"
+            android:ems="10"
+            android:hint="Source files/Wildcard"
+            android:singleLine="true" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/buttonCoSrc"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="..." />
+
+        <EditText
+            android:id="@+id/editTextCoDstPath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/buttonCoSrc"
+            android:layout_toLeftOf="@+id/buttonCoDstPath"
+            android:ems="10"
+            android:hint="Achieve output path"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/buttonCoDstPath"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/buttonCoSrc"
+            android:text="..." />
+
+        <CheckBox
+            android:id="@+id/checkBoxCoType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/editTextCoDstPath"
+            android:text="Specify type" />
+
+        <Spinner
+            android:id="@+id/spinnerCoType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextCoDstPath"
+            android:layout_toRightOf="@+id/checkBoxCoType"
+			android:visibility="invisible"
+            android:entries="@array/array_compress_type" />
+
+        <EditText
+            android:id="@+id/editTextCoAchieveName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/spinnerCoType"
+            android:ems="10"
+            android:hint="Achieve name"
+            android:singleLine="true" />
+
+        <CheckBox
+            android:id="@+id/checkBoxCoPasswd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/editTextCoAchieveName"
+            android:checked="false"
+            android:text="Password" />
+
+        <CheckBox
+            android:id="@+id/checkBoxCoPwdVisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/editTextCoAchieveName"
+            android:text="ShowPassword"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/editTextCoPasswd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/checkBoxCoPasswd"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/buttonCoExecute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/editTextCoPasswd"
+            android:text="Execute" />
+    </RelativeLayout>
+
+</ScrollView>
